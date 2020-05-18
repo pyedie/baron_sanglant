@@ -6,6 +6,7 @@ from discord.ext.commands import has_permissions, CheckFailure
 import time
 import random
 
+token = TOKEN_BOT
 bot = commands.Bot(command_prefix='$')
 client = commands.Bot(command_prefix='$')
 bot.remove_command("help")
@@ -92,4 +93,4 @@ async def logs_error(ctx, error):
     print(error)
     await ctx.send("Vous n'avez pas les permissions de consulter les logs !")
 
-bot.run(TOKEN_BOT)
+bot.run(token)
