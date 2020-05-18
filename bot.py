@@ -5,8 +5,9 @@ from discord.utils import get
 from discord.ext.commands import has_permissions, CheckFailure
 import time
 import random
+import os
 
-token = TOKEN_BOT
+token = os.environ.get('token')
 bot = commands.Bot(command_prefix='$')
 client = commands.Bot(command_prefix='$')
 bot.remove_command("help")
